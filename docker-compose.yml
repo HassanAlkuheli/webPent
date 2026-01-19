@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  ngrok:
+    build: .
+    environment:
+      - NGROK_AUTHTOKEN=2b00V4SGGfafsECd7d7iRCWdV0E_3iJLqUntkzPJ7K1qWKD5v
+    command: http 80
+    ports:
+      - "4040:4040"  # Expose ngrok web interface for monitoring
